@@ -1,0 +1,7 @@
+<h1>Hola {{ title }}</h1> <!-- la variable title esta en app.component.ts -->
+
+<button (click)="changeTitle()">Cambiar el titulo</button>
+
+<app-product [product]="p" *ngFor="let p of products"> </app-product>
+
+<router-outlet></router-outlet>
