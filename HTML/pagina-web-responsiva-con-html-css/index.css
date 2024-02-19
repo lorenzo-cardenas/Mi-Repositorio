@@ -45,7 +45,7 @@ body{
 }
 
 header{
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(255, 255, 255);
     color:white
 }
 
@@ -58,8 +58,8 @@ header .logo{
     margin: 0;
     padding: 25px 30px;
     font-weight: bold;
-    font-size: 1.6em;
-    color: blueviolet;
+    color: rgb(0, 0, 0);
+    font-size: 2em ;
 }
 
 header .container{
@@ -73,6 +73,7 @@ header nav{
     flex-direction: column;
     text-align: center;
     padding-bottom: 25px;
+    font-size: 1.5em ;
 }
 
 header a{
@@ -112,6 +113,7 @@ header a:hover{
 #about .container{
     text-align: center;
     padding: 200px 12px;
+    font-size: 1.5em ;
 }
 
 #nuestros-programas{
@@ -122,7 +124,7 @@ header a:hover{
 
 #nuestros-programas .container{
     text-align: center;
-    padding: 100px 0px;
+    padding: 100px 100px;
     
 }
 
@@ -130,24 +132,31 @@ header a:hover{
     display: none;
 }
 
+#nuestros-programas li{
+    list-style:none;
+    padding: 5px 5px;
+    font-weight: bold;
+}
+
+
 #nuestros-programas .carta{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 20px;
     text-justify: auto;
-    padding: 40px 0px;
+    padding: 30px 30px;
     margin: 20px;
 }
 
 .carta:first-child{
-    
     background-image: linear-gradient(
         0deg,
         rgba(0,0,0,0.7),
         rgba(0,0,0,0.7)
     )
     ,url("img/usa.png");
+    
 }
 
 .carta:nth-child(2){
@@ -156,19 +165,10 @@ header a:hover{
         rgba(0,0,0,0.7),
         rgba(0,0,0,0.7)
     )
-    ,url("img/jp.png");
-}
-
-.carta:nth-child(3){
-    background-image: linear-gradient(
-        0deg,
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7)
-    )
     ,url("img/fr.png");
 }
 
-.carta:nth-child(4){
+.carta:nth-child(3){
     background-image: linear-gradient(
         0deg,
         rgba(0,0,0,0.7),
@@ -191,7 +191,7 @@ header a:hover{
 #caracteristicas li{
     margin: 12px 0px;
     font-weight: bold;
-
+    list-style:none;
 }
 
 #registrate{
@@ -221,4 +221,111 @@ footer .container{
     justify-content: center;
     align-items: center;
 
+}
+
+@media (min-width: 720px){
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #hero h1{
+        font-size: 6em;
+    }
+
+    #hero button{
+        font-size: 2.5em;
+    }
+
+    #about .container{
+        display: flex;
+    }
+
+    #about .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: initial;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #about .img-container{
+        background-image: linear-gradient(
+            0deg,
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        
+        ),url("img/about.png");
+        background-size: cover;
+        background-position: center center;
+        height: 600px;
+        width: 450px;
+    }
+
+    #nuestros-programas .carta{
+
+        padding: 30px 30px;
+        background-size: 100% 80px;
+        background-repeat: no-repeat;
+        background-position-y: 0 ;
+        border-radius: 20px;
+        margin: 20px;
+        text-justify: auto;
+        background-color: rgb(80, 80, 80);
+        box-shadow: 2px 2px 10px rgb(0, 0, 0) ;
+    }
+
+    #nuestros-programas .programas{
+        display: flex;
+        justify-content: center;
+    }
+
+    #nuestros-programas p{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #nuestros-programas h3{
+        margin-top: 0;
+    }
+
+    #nuestros-programas .carta{
+        padding: 15px;
+    }
+
+    #caracteristicas {
+        background-image:url("img/about.png");
+        background-repeat: no-repeat;
+        background-size: 400px 400px;
+        background-position: calc(100vw - 500px) 120px;
+    }
+
+    #caracteristicas .container{
+        text-align: left;
+    }
+
+    #caracteristicas ul{
+        text-align: 100px;
+    }
+  
+}
+
+@media(min-width: 1100px){
+    #caracteristicas{
+        background-position-x: calc(100vw - 800px) ;
+    }
 }
