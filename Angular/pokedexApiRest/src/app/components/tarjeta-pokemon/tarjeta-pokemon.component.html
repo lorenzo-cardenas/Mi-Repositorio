@@ -1,0 +1,11 @@
+<div id="container" class="seleccionado2" [ngClass]="{seleccionado:seleccionado}">
+
+    <img src="./../../../assets/img/flecha.png" id="flecha" *ngIf="seleccionado">
+    <div id="tarjeta" (click)="clickeado.emit(id)">
+        <div id="circulo"></div>
+        <img src="{{img}}">
+        <span *ngIf="data">No. {{id}}</span>
+        <span *ngIf="data">{{data.name | titlecase}}</span>
+
+    </div>
+</div>
